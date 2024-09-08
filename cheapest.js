@@ -33,4 +33,15 @@ const phones = [
 ];
 
 // create a function
-function getCheapestPhone
+function getCheapestPhone(phones) {
+  let min = phones[0];
+  for (const phone of phones) {
+    if (phone.price < min.price) {
+      min = phone;
+    }
+  }
+  return min;
+}
+
+const cheap = getCheapestPhone(phones);
+console.log("Cheapest mobile phone is: ", cheap);
